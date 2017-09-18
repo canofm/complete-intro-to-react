@@ -1,0 +1,9 @@
+{
+  "name": "complete-intro-to-react",
+  "version": "1.0.0",
+  "description": "A Complete Intro to React workshop",
+  "main": "server.js",
+  "repository": "git@github.com:canofm/complete-intro-to-react.git",
+  "author": "Federico Cano <canofedericomartin@gmail.com>",
+  "license": "MIT"
+}
