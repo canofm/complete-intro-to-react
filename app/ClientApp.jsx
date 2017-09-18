@@ -1,13 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
+import Landing from './components/Landing';
 
 const App = () => (
   <div className="app">
-    <div className="landing">
-      <h1>svideo</h1>
-      <input type="text" placeholder="Search" />
-      <a>or Browse All</a>
-    </div>
+    <Landing />
   </div>
 );
 
