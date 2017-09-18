@@ -5,5 +5,16 @@
   "main": "server.js",
   "repository": "git@github.com:canofm/complete-intro-to-react.git",
   "author": "Federico Cano <canofedericomartin@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "format":
+      "prettier --write --single-quote --print-width=100 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\""
+  },
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.7.0"
+  }
 }
