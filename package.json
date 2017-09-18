@@ -7,13 +7,16 @@
   "author": "Federico Cano <canofedericomartin@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "webpack",
     "format":
       "prettier --write --single-quote --print-width=100 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
-    "lint": "eslint **/*.{js,jsx} --quiet"
+    "lint": "eslint **/*.{js,jsx} --quiet",
+    "watch": "webpack --watch"
   },
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "webpack": "2.6.1"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
