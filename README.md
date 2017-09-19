@@ -6,7 +6,7 @@ This repo is for learning and practice a complete React ecosystem following the 
 - React Router v4
 - Styled Components
 - Webpack 2
-- Hot Module Replace
+- Hot Module Replacement
 - ESLint + Prettier
 - Flow
 - Async imports, code splitting
