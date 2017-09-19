@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShowCard component should renders correctly 1`] = `
+<styled.div>
+  <styled.img
+    alt="A title Show Poster"
+    src="/public/img/posters/A poster"
+  />
+  <div>
+    <h3>
+      A title
+    </h3>
+    <h4>
+      (
+      A year
+      )
+    </h4>
+    <p>
+      A description
+    </p>
+  </div>
+</styled.div>
+`;
