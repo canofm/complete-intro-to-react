@@ -1,20 +1,15 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Landing from './components/Landing';
-import SearchContainer from './containers/SearchContainer';
-import FourOhFour from './components/FourOhFour';
+import App from './components/App';
 
-const App = () => (
-  <BrowserRouter>
-    <div className="app">
-      <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route path="/search" component={SearchContainer} />
-        <Route component={FourOhFour} />
-      </Switch>
-    </div>
-  </BrowserRouter>
-);
+const renderApp = () => {
+  render(<App />, document.getElementById('app'));
+};
 
-render(<App />, document.getElementById('app'));
+renderApp();
+
+if (module.hot) {
+  module.hot.accept('./components/App', () => {
+    renderApp();
+  });
+}
