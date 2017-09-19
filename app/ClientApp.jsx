@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Landing from './components/Landing';
-import Search from './components/Search';
+import SearchContainer from './containers/SearchContainer';
 import FourOhFour from './components/FourOhFour';
 
 const App = () => (
@@ -10,7 +10,7 @@ const App = () => (
     <div className="app">
       <Switch>
         <Route exact path="/" component={Landing} />
-        <Route path="/search" component={Search} />
+        <Route path="/search" component={SearchContainer} />
         <Route component={FourOhFour} />
       </Switch>
     </div>
