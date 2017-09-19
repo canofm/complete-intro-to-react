@@ -12,7 +12,8 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json']
   },
   devServer: {
-    publicPath: '/public/'
+    publicPath: '/public/',
+    historyApiFallback: true
   },
   stats: {
     color: true,
