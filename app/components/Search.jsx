@@ -21,9 +21,13 @@ const Search = props => (
   </div>
 );
 
+Search.defaultProps = {
+  searchTerm: ''
+};
+
 Search.propTypes = {
   handleSearchTermChange: func.isRequired,
-  searchTerm: string.isRequired,
+  searchTerm: string,
   shows: arrayOf(shape).isRequired
 };
 
