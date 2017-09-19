@@ -1,6 +1,6 @@
 # A Complete Intro to React
 
-This repo is for learning and practice a complete React ecosystem following the workshop of Brian Holt in FrontendMaster.
+This repo is for learning and practice a complete React ecosystem following the workshop of Brian Holt at FrontendMaster.
 
 - React + Redux + Thunk
 - React Router v4
