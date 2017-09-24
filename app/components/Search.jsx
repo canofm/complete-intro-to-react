@@ -1,8 +1,13 @@
+// @flow
+
 import React from 'react';
-import { string, func, arrayOf, shape } from 'prop-types';
 import ShowCard from './ShowCard';
 
-const Search = props => (
+const Search = (props: {
+  searchTerm: string,
+  handleSearchTermChange: Function,
+  shows: Array<Show>
+}) => (
   <div className="search">
     <header>
       <h1>svideo</h1>
@@ -23,12 +28,6 @@ const Search = props => (
 
 Search.defaultProps = {
   searchTerm: ''
-};
-
-Search.propTypes = {
-  handleSearchTermChange: func.isRequired,
-  searchTerm: string,
-  shows: arrayOf(shape).isRequired
 };
 
 export default Search;
