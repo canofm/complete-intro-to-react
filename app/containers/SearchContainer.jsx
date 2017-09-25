@@ -10,6 +10,7 @@ class SearchContainer extends Component {
   props: {
     shows: Array<Show>
   };
+
   handleSearchTermChange = (event: SyntheticKeyboardEvent & { target: HTMLInputElement }) => {
     this.setState({ searchTerm: event.target.value });
   };

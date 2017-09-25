@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ShowCard from './ShowCard';
+import Header from './Header';
 
 const Search = (props: {
   searchTerm: string,
@@ -9,15 +10,7 @@ const Search = (props: {
   shows: Array<Show>
 }) => (
   <div className="search">
-    <header>
-      <h1>svideo</h1>
-      <input
-        onChange={props.handleSearchTermChange}
-        value={props.searchTerm}
-        type="text"
-        placeholder="Search"
-      />
-    </header>
+    <Header showSearch {...props} />
     <div>
       {props.shows
         .filter(show => show.title.toUpperCase().includes(props.searchTerm.toUpperCase()))
