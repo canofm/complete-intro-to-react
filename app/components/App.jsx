@@ -4,7 +4,8 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import type { Match } from 'react-router-dom';
 import Landing from './Landing';
-import SearchContainer from './../containers/SearchContainer';
+import Search from './Search';
+import SearchContainer from '../containers/SearchContainer';
 import FourOhFour from './FourOhFour';
 import Details from './Details';
 import preload from '../../data.json';
@@ -13,10 +14,13 @@ const App = () => (
   <BrowserRouter>
     <div className="app">
       <Switch>
-        <Route exact path="/" component={Landing} />
+        <Route exact path="/" component={SearchContainer(Landing)} />
         <Route
           path="/search"
-          component={props => <SearchContainer shows={preload.shows} {...props} />}
+          component={() => {
+            const SearchComponent = SearchContainer(Search);
+            return <SearchComponent shows={preload.shows} />;
+          }}
         />
         <Route
           path="/details/:id"
