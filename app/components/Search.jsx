@@ -4,11 +4,7 @@ import React from 'react';
 import ShowCard from './ShowCard';
 import Header from './Header';
 
-const Search = (props: {
-  searchTerm: string,
-  handleSearchTermChange: Function,
-  shows: Array<Show>
-}) => (
+const Search = (props: { searchTerm: string, shows: Array<Show> }) => (
   <div className="search">
     <Header showSearch {...props} />
     <div>
