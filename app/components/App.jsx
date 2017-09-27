@@ -7,7 +7,7 @@ import Landing from './Landing';
 import Search from './Search';
 import SearchContainer from '../containers/SearchContainer';
 import FourOhFour from './FourOhFour';
-import Details from './Details';
+import DetailsContainer from '../containers/DetailsContainer';
 import preload from '../../data.json';
 
 const App = () => (
@@ -25,7 +25,7 @@ const App = () => (
         <Route
           path="/details/:id"
           component={(props: { match: Match }) => (
-            <Details
+            <DetailsContainer
               show={preload.shows.find(show => props.match.params.id === show.imdbID)}
               {...props}
             />
