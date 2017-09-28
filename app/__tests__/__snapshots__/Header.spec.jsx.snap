@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component by default should render correctly 1`] = `
+<header>
+  <h1>
+    <Link
+      replace={false}
+      to="/"
+    >
+      svideo
+    </Link>
+  </h1>
+  <BackButton />
+</header>
+`;
+
+exports[`Header component when it receive showSearch prop should render correctly 1`] = `
+<header>
+  <h1>
+    <Link
+      replace={false}
+      to="/"
+    >
+      svideo
+    </Link>
+  </h1>
+  <SearchInput
+    handleSearchTermChange={[Function]}
+    searchTerm=""
+    showSearch={true}
+  />
+</header>
+`;
