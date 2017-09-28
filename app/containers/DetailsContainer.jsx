@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Details from '../components/Details';
-import Spinner from '../components/Spinner';
+import Rating from '../components/Rating';
 
 class DetailsContainer extends Component {
   state = {
@@ -20,10 +20,8 @@ class DetailsContainer extends Component {
     show: Show
   };
   render() {
-    const Rating = <h3>{this.state.apiData.rating}</h3>;
-    const ratingComponent = this.state.apiData.rating ? Rating : <Spinner />;
-
-    return <Details ratingComponent={ratingComponent} {...this.props} />;
+    const value = this.state.apiData.rating;
+    return <Details ratingComponent={<Rating value={value} />} {...this.props} />;
   }
 }
 
