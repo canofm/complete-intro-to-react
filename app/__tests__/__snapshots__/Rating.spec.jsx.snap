@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating component by default should renders correctly 1`] = `<Spinner />`;
+
+exports[`Rating component when it gets value should renders correctly 1`] = `
+<RatingValue
+  value="5.5"
+/>
+`;

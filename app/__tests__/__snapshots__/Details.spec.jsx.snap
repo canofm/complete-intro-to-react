@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Details component should render correctly 1`] = `
+<div
+  className="details"
+>
+  <Header
+    handleSearchTermChange={[Function]}
+    searchTerm=""
+    showSearch={false}
+  />
+  <section>
+    <h1>
+      Atlanta
+    </h1>
+    <h2>
+      (
+      2008–2013
+      )
+    </h2>
+    <img
+      alt="Poster for Atlanta"
+      src="/public/img/posters/a.jpg"
+    />
+    <p>
+      Two cousins, with different views on art versus commerce, on their way up through the Atlanta rap scene; "Earnest 'Earn' Marks," an ambitious college drop-out and his estranged cousin, who suddenly becomes a star.
+    </p>
+  </section>
+  <div>
+    <iframe
+      allowFullScreen={true}
+      frameBorder="0"
+      src="https://www.youtube-nocookie.com/embed/MpEdJ-mmTlY?rel=0&amp;controls=0$amp;showinfo=0"
+      title="Trailer for Atlanta"
+    />
+  </div>
+</div>
+`;
