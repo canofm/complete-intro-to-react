@@ -10,8 +10,7 @@
     "api": "node ratingsAPI.js",
     "build": "webpack",
     "dev": "webpack-dev-server",
-    "format":
-      "prettier --write --single-quote --print-width=100 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
+    "format": "prettier --write --single-quote --print-width=100 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet",
     "test": "jest",
     "test:coverage": "jest --coverage",
@@ -19,7 +18,9 @@
     "watch": "webpack --watch"
   },
   "jest": {
-    "snapshotSerializers": ["jest-serializer-enzyme"]
+    "snapshotSerializers": [
+      "jest-serializer-enzyme"
+    ]
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -34,7 +35,9 @@
     "react": "^15.6.1",
     "react-addons-perf": "15.4.2",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
     "styled-components": "^2.1.2",
     "webpack": "2.6.1",
     "webpack-dev-middleware": "1.10.2",
