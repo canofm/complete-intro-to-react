@@ -1,14 +1,33 @@
 // @flow
 
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { setSearchTerm } from '../actions';
 
-const SearchInput = (props: { searchTerm: string, handleSearchTermChange: Function }) => (
-  <input
-    onChange={props.handleSearchTermChange}
-    value={props.searchTerm}
-    type="text"
-    placeholder="Search"
-  />
-);
+const mapStateToProps = state => ({ searchTerm: state.searchTerm });
+const mapDispatchToProps = (dispatch: Function) => ({
+  handleSearchTermChange(event) {
+    dispatch(setSearchTerm(event.target.value));
+  }
+});
+
+@connect(mapStateToProps,mapDispatchToProps)
+class SearchInput extends Component {
+  props: {
+    searchTerm: string,
+    handleSearchTermChange: Function
+  };
+
+  render() {
+    return (
+      <input
+        onChange={this.props.handleSearchTermChange}
+        value={this.props.searchTerm}
+        type="text"
+        placeholder="Search"
+      />
+    );
+  }
+}
 
 export default SearchInput;
