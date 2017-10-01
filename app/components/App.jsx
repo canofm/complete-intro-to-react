@@ -17,7 +17,7 @@ const App = () => (
     <Provider store={store}>
       <div className="app">
         <Switch>
-          <Route exact path="/" component={SearchContainer(Landing)} />
+          <Route exact path="/" component={Landing} />
           <Route
             path="/search"
             component={() => {
