@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 import store from '../store';
 import Landing from './Landing';
 import Search from './Search';
-import SearchContainer from '../containers/SearchContainer';
 import FourOhFour from './FourOhFour';
 import DetailsContainer from '../containers/DetailsContainer';
 import preload from '../../data.json';
@@ -18,13 +17,7 @@ const App = () => (
       <div className="app">
         <Switch>
           <Route exact path="/" component={Landing} />
-          <Route
-            path="/search"
-            component={() => {
-              const SearchComponent = SearchContainer(Search);
-              return <SearchComponent shows={preload.shows} />;
-            }}
-          />
+          <Route path="/search" component={() => <Search shows={preload.shows} />} />
           <Route
             path="/details/:id"
             component={(props: { match: Match }) => (
