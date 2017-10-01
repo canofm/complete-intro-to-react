@@ -39,7 +39,10 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        options: {
+          plugins: ['transform-decorators-legacy']
+        }
       }
     ]
   }
