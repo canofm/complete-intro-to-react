@@ -5,12 +5,8 @@ import { Link } from 'react-router-dom';
 import BackButton from './BackButton';
 import SearchInput from './SearchInput';
 
-const Header = (props: {
-  showSearch?: boolean,
-  handleSearchTermChange?: Function,
-  searchTerm?: string
-}) => {
-  const utilSpace = props.showSearch ? <SearchInput {...props} /> : <BackButton />;
+const Header = (props: { showSearch?: boolean }) => {
+  const utilSpace = props.showSearch ? <SearchInput /> : <BackButton />;
 
   return (
     <header>
@@ -23,9 +19,7 @@ const Header = (props: {
 };
 
 Header.defaultProps = {
-  showSearch: false,
-  handleSearchTermChange: function noop() {},
-  searchTerm: ''
+  showSearch: false
 };
 
 export default Header;
