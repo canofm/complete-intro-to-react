@@ -1,4 +1,4 @@
-import { SET_SEARCH_TERM } from '../actions';
+import { SET_SEARCH_TERM } from '../actions/searchTerm';
 
 const searchTerm = (state = '', action) => {
   if (action.type === SET_SEARCH_TERM) {
