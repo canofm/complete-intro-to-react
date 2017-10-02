@@ -1,3 +1,5 @@
+[![Build Status](https://semaphoreci.com/api/v1/canofm/complete-intro-to-react/branches/master/badge.svg)](https://semaphoreci.com/canofm/complete-intro-to-react)
+
 # A Complete Intro to React
 
 This repo is for learning and practice a complete React ecosystem following the workshop of Brian Holt at FrontendMaster.
