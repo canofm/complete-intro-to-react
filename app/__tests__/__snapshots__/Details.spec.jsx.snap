@@ -5,8 +5,6 @@ exports[`Details component should render correctly 1`] = `
   className="details"
 >
   <Header
-    handleSearchTermChange={[Function]}
-    searchTerm=""
     showSearch={false}
   />
   <section>
