@@ -6,6 +6,6 @@ export const addAPIData = apiData => ({ type: ADD_API_DATA, payload: apiData });
 
 export const getAPIDetails = imdbID => dispatch =>
   axios
-    .get(`http://localhost:3000/${imdbID}`)
+    .get(`http://localhost:8080/${imdbID}`)
     .then(response => dispatch(addAPIData(response.data)))
     .catch(error => console.log('axios error: ', error)); // eslint-disable-line no-console

@@ -33,7 +33,7 @@ test('getAPIDetails', done => {
           response: blackMirror
         })
         .then(() => {
-          expect(request.url).toEqual(`http://localhost:3000/${blackMirror.imdbID}`);
+          expect(request.url).toEqual(`http://localhost:8080/${blackMirror.imdbID}`);
           expect(dispatchMock).toBeCalledWith(addAPIData(blackMirror));
           done();
         });
