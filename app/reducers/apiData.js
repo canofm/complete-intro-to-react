@@ -1,4 +1,4 @@
-import { ADD_API_DATA } from '../actions';
+import { ADD_API_DATA } from '../actions/apiData';
 
 const apiData = (state = {}, action) => {
   if (action.type === ADD_API_DATA) {

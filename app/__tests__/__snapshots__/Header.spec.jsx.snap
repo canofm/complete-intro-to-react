@@ -24,10 +24,6 @@ exports[`Header component when it receive showSearch prop should render correctl
       svideo
     </Link>
   </h1>
-  <SearchInput
-    handleSearchTermChange={[Function]}
-    searchTerm=""
-    showSearch={true}
-  />
+  <Connect(SearchInput) />
 </header>
 `;

@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getAPIDetails } from '../actions';
+import { getAPIDetails } from '../actions/apiData';
 import Details from '../components/Details';
 import Rating from '../components/Rating';
 

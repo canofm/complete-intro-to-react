@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Search from '../components/Search';
+import { UnwrappedSearch as Search } from '../components/Search';
 import ShowCard from '../components/ShowCard';
 import preload from '../../data.json';
 
