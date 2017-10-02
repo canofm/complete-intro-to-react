@@ -1,26 +1,38 @@
 // @flow
 
 import React, { Component } from 'react';
-import axios from 'axios';
+import { connect } from 'react-redux';
+import { getAPIDetails } from '../actions';
 import Details from '../components/Details';
 import Rating from '../components/Rating';
 
-class DetailsContainer extends Component {
-  state = {
-    apiData: { rating: '' }
-  };
-  componentDidMount() {
-    axios
-      .get(`http://localhost:3000/${this.props.show.imdbID}`)
-      .then((response: { data: { rating: string } }) => {
-        this.setState({ apiData: response.data });
-      });
+const mapStateToProps = (state, ownProps) => {
+  const apiData = state.apiData[ownProps.show.imdbID] || {};
+  return { rating: apiData.rating };
+};
+
+const mapDispatchToProps = (dispatch: Function, ownProps) => ({
+  getAPIData() {
+    dispatch(getAPIDetails(ownProps.show.imdbID));
   }
+});
+
+@connect(mapStateToProps, mapDispatchToProps)
+class DetailsContainer extends Component {
+  componentDidMount() {
+    if (!this.props.rating) {
+      this.props.getAPIData();
+    }
+  }
+
   props: {
-    show: Show
+    show: Show,
+    rating: string,
+    getAPIData: Function
   };
+
   render() {
-    const value = this.state.apiData.rating;
+    const value = this.props.rating;
     return <Details ratingComponent={<Rating value={value} />} {...this.props} />;
   }
 }
