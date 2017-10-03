@@ -18,9 +18,9 @@
     "watch": "webpack --watch"
   },
   "jest": {
-    "snapshotSerializers": [
-      "jest-serializer-enzyme"
-    ]
+    "testEnvironment": "jest-environment-node",
+    "snapshotSerializers": ["jest-serializer-enzyme"],
+    "collectCoverageFrom": ["**/*.jsx"]
   },
   "dependencies": {
     "axios": "^0.16.2",
