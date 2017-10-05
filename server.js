@@ -11,6 +11,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 const webpack = require('webpack');
 const config = require('./webpack.config');
 const cors = require('cors');
+const compression = require('compression');
 const App = require('./app/components/App').default;
 
 const StaticRouter = ReactRouter.StaticRouter;
@@ -22,7 +23,7 @@ const buffer = fs.readFileSync('./data.json');
 const showsObj = JSON.parse(buffer);
 
 const server = express();
-
+server.use(compression());
 server.use(cors());
 const ratedShows = showsObj.shows.map(show =>
   Object.assign(
