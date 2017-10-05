@@ -3,3 +3,4 @@ public/bundle.js
 .vscode/
 notes/
 coverage/
+public/*.hot-*
