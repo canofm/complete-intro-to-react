@@ -6,9 +6,7 @@ import type { Match } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from '../store';
 import AsyncRoute from './AsyncRoute';
-import Search from './Search';
 import FourOhFour from './FourOhFour';
-import DetailsContainer from '../containers/DetailsContainer';
 import preload from '../../data.json';
 
 const App = () => (
@@ -20,15 +18,26 @@ const App = () => (
           path="/"
           component={props => <AsyncRoute props={props} loadingPromise={import('./Landing')} />}
         />
-        <Route path="/search" component={() => <Search shows={preload.shows} />} />
         <Route
-          path="/details/:id"
-          component={(props: { match: Match }) => (
-            <DetailsContainer
-              show={preload.shows.find(show => props.match.params.id === show.imdbID)}
-              {...props}
+          path="/search"
+          component={props => (
+            <AsyncRoute
+              props={Object.assign({ shows: preload.shows }, props)}
+              loadingPromise={import('./Search')}
             />
           )}
+        />
+        <Route
+          path="/details/:id"
+          component={(props: { match: Match }) => {
+            const selectedShow = preload.shows.find(show => props.match.params.id === show.imdbID);
+            return (
+              <AsyncRoute
+                props={Object.assign({ show: selectedShow, match: {} }, props)}
+                loadingPromise={import('../containers/DetailsContainer')}
+              />
+            );
+          }}
         />
         <Route component={FourOhFour} />
       </Switch>
